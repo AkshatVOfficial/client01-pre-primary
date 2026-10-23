@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap");
+@import "tailwindcss";
+
+/* ==========================================================================
+   DESIGN TOKENS — Premium Soft Montessori palette
+   ========================================================================== */
+@theme {
+  --color-cream: #faf7f0;
+  --color-cream-dark: #f3ede1;
+  --color-sage: #9caf88;
+  --color-sage-light: #e4ead0;
+  --color-sage-dark: #76895f;
+  --color-forest: #344e41;
+  --color-forest-light: #4a6b5a;
+  --color-terracotta: #d98b73;
+  --color-terracotta-dark: #c06f54;
+  --color-peach: #f3d6c6;
+  --color-gold: #f2e6a7;
+  --color-ink: #41443f;
+
+  --font-display: "Playfair Display", "DM Serif Display", Georgia, serif;
+  --font-body: "DM Sans", "Nunito Sans", system-ui, -apple-system, sans-serif;
+
+  --shadow-soft: 0 10px 30px -12px rgba(52, 78, 65, 0.18);
+  --shadow-lift: 0 20px 45px -18px rgba(52, 78, 65, 0.28);
+
+  --animate-fade-up: fade-up 0.6s ease-out both;
+  --animate-fade-in: fade-in 0.6s ease-out both;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+@layer base {
+  * {
+    @apply border-forest/10;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream text-ink font-body antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display text-forest;
+    text-wrap: balance;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-terracotta);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer utilities {
+  .container-site {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}

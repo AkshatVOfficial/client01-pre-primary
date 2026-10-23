@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 900" role="img" aria-hidden="true">
+
+  <rect width="800" height="900" fill="#FAF7F0" />
+  <circle cx="169.0" cy="198.0" r="256.0" fill="#9CAF88" opacity="0.35" />
+  <circle cx="656.0" cy="677.0" r="240.0" fill="#F3D6C6" opacity="0.30" />
+  <circle cx="624.0" cy="180.0" r="144.0" fill="#D98B73" opacity="0.28" />
+  <circle cx="176.0" cy="720.0" r="128.0" fill="#D98B73" opacity="0.22" />
+
+  <circle cx="566.2" cy="225.3" r="3.8" fill="#344E41" opacity="0.45" />
+  <circle cx="467.7" cy="114.9" r="6.1" fill="#344E41" opacity="0.45" />
+  <circle cx="577.7" cy="103.6" r="5.7" fill="#344E41" opacity="0.45" />
+  <circle cx="401.8" cy="552.4" r="6.8" fill="#344E41" opacity="0.45" />
+  <circle cx="727.1" cy="381.3" r="6.4" fill="#344E41" opacity="0.45" />
+
+  <g transform="translate(400.0,450.0) scale(2.0)">
+
+    <g transform="translate(-55,-70)">
+      <rect x="25" y="85" width="60" height="45" rx="8" fill="#F3D6C6" stroke="#344E41" stroke-width="4"/>
+      <path d="M55 85 C55 55 30 50 20 30 C40 28 58 45 58 65" fill="#9CAF88" stroke="#344E41" stroke-width="3.5" stroke-linejoin="round"/>
+      <path d="M55 85 C55 50 85 45 95 20 C70 22 55 42 53 60" fill="#9CAF88" stroke="#344E41" stroke-width="3.5" stroke-linejoin="round"/>
+      <path d="M55 85 V40" stroke="#344E41" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="30" cy="100" r="4" fill="#344E41" opacity="0.5"/>
+      <circle cx="78" cy="105" r="4" fill="#344E41" opacity="0.5"/>
+    </g>
+  
+  </g>
+</svg>

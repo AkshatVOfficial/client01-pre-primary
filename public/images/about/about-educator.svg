@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 900" role="img" aria-hidden="true">
+
+  <rect width="800" height="900" fill="#FAF7F0" />
+  <circle cx="153.0" cy="198.0" r="256.0" fill="#9CAF88" opacity="0.35" />
+  <circle cx="656.0" cy="693.0" r="240.0" fill="#F3D6C6" opacity="0.30" />
+  <circle cx="624.0" cy="180.0" r="144.0" fill="#D98B73" opacity="0.28" />
+  <circle cx="176.0" cy="720.0" r="128.0" fill="#D98B73" opacity="0.22" />
+
+  <circle cx="448.0" cy="396.2" r="5.3" fill="#344E41" opacity="0.45" />
+  <circle cx="202.5" cy="686.9" r="6.3" fill="#344E41" opacity="0.45" />
+  <circle cx="503.1" cy="193.1" r="5.1" fill="#344E41" opacity="0.45" />
+  <circle cx="284.3" cy="261.0" r="6.8" fill="#344E41" opacity="0.45" />
+  <circle cx="733.7" cy="105.7" r="6.4" fill="#344E41" opacity="0.45" />
+
+  <g transform="translate(400.0,450.0) scale(1.9)">
+
+    <g transform="translate(-50,-65)">
+      <path d="M50 130 V60" stroke="#344E41" stroke-width="5" stroke-linecap="round"/>
+      <path d="M50 70 C50 40 25 35 10 15 C35 12 55 30 55 55" fill="#9CAF88" stroke="#344E41" stroke-width="3.5" stroke-linejoin="round"/>
+      <path d="M50 85 C50 60 78 55 92 35 C68 32 50 50 48 70" fill="#D98B73" stroke="#344E41" stroke-width="3.5" stroke-linejoin="round"/>
+      <ellipse cx="50" cy="132" rx="30" ry="8" fill="#344E41" opacity="0.15"/>
+    </g>
+  
+  </g>
+</svg>
