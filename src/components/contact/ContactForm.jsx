@@ -78,7 +78,7 @@ export function ContactForm() {
           aria-invalid={Boolean(fieldError('parentName'))}
           aria-describedby={fieldError('parentName') ? 'parentName-error' : undefined}
           className="w-full rounded-xl border border-forest/15 bg-white px-4 py-3 text-sm text-ink placeholder:text-ink/40 focus:border-forest/40"
-          placeholder="e.g. Priya Sharma"
+          placeholder="e.g. Akshat Verma"
         />
         {fieldError('parentName') && (
           <p id="parentName-error" className="mt-1.5 flex items-center gap-1.5 text-xs text-terracotta-dark">
