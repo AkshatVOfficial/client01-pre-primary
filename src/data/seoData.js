@@ -29,6 +29,11 @@ export const seoData = {
     description:
       'Get in touch with Little Roots Preschool for admissions enquiries, school visits, and more information about our programs.',
   },
+  privacy: {
+    title: 'Privacy Policy',
+    description:
+      'How Little Roots Preschool collects, stores, and uses the details you share through its admissions enquiry form.',
+  },
   notFound: {
     title: 'Page Not Found',
     description: 'The page you are looking for could not be found.',

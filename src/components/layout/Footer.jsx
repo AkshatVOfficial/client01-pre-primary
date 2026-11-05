@@ -95,7 +95,9 @@ export function Footer() {
           <p>
             &copy; {CURRENT_YEAR} {identity.name}. All rights reserved.
           </p>
-          <p>Designed with care for little learners.</p>
+          <Link to="/privacy" className="hover:text-cream">
+            Privacy Policy
+          </Link>
         </div>
       </div>
     </footer>

@@ -5,19 +5,18 @@ import { Container } from '../components/ui/Container';
 import { GalleryFilters } from '../components/gallery/GalleryFilters';
 import { GalleryGrid } from '../components/gallery/GalleryGrid';
 import { GalleryLightbox } from '../components/gallery/GalleryLightbox';
-import { galleryData, galleryCategories } from '../data/galleryData';
+import { galleryCategories } from '../data/galleryData';
 import { seoData } from '../data/seoData';
+import { useGalleryItems } from '../hooks/useGalleryItems';
 
 export function Gallery() {
+  const { status, items, source, failed } = useGalleryItems();
   const [activeCategory, setActiveCategory] = useState('All');
   const [lightboxIndex, setLightboxIndex] = useState(null);
 
   const filteredItems = useMemo(
-    () =>
-      activeCategory === 'All'
-        ? galleryData
-        : galleryData.filter((item) => item.category === activeCategory),
-    [activeCategory],
+    () => (activeCategory === 'All' ? items : items.filter((item) => item.category === activeCategory)),
+    [activeCategory, items],
   );
 
   const handleOpenImage = useCallback(
@@ -56,11 +55,26 @@ export function Gallery() {
             active={activeCategory}
             onChange={setActiveCategory}
           />
-          <GalleryGrid items={filteredItems} onOpenImage={handleOpenImage} />
-          <p className="text-center text-xs text-ink/50">
-            Placeholder illustrations shown for layout purposes. Real, parent-authorized photographs will
-            replace these before launch.
-          </p>
+          {status === 'loading' ? (
+            <div
+              className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4"
+              role="status"
+              aria-label="Loading photos"
+            >
+              {Array.from({ length: 8 }, (_, i) => (
+                <div key={i} className="aspect-square animate-pulse rounded-2xl bg-forest/10 sm:rounded-3xl" />
+              ))}
+            </div>
+          ) : (
+            <GalleryGrid items={filteredItems} onOpenImage={handleOpenImage} />
+          )}
+          {source === 'static' && (
+            <p className="text-center text-xs text-ink/50">
+              {failed
+                ? 'We could not load the latest photos right now, so placeholder illustrations are shown.'
+                : 'Placeholder illustrations shown for layout purposes. Real, parent-authorized photographs will replace these before launch.'}
+            </p>
+          )}
         </Container>
       </section>
 
